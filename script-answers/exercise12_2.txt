@@ -1,65 +1,0 @@
-Script started on 2024-08-05 11:17:16+03:00 [TERM="xterm-256color" TTY="/dev/pts/15" COLUMNS="216" LINES="17"]
-[?2004h]0;noorsu@SWIFTX14-7-22: ~/osa12-kontit/script-answers[01;32mnoorsu@SWIFTX14-7-22[00m:[01;34m~/osa12-kontit/script-answers[00m$ [200~docker container run -it ubuntu bash[201~[7mdocker container run -it ubuntu bash[27mdocker container run -it ubuntu bash
-[?2004l[?2004h]0;root@8c6afc02bdc3: /root@8c6afc02bdc3:/# mmkkddiirr  (( //uuss	r/ssee	 rr	c/aa	pppp
-[?2004l[?2004h]0;root@8c6afc02bdc3: /root@8c6afc02bdc3:/# ttoouucchh  //uuss	r/ssrr	c/aapp	p/iinnddeexx..jjss
-[?2004l[?2004h]0;root@8c6afc02bdc3: /root@8c6afc02bdc3:/# [Keexxiitt
-[?2004lexit
-[?2004h]0;noorsu@SWIFTX14-7-22: ~/osa12-kontit/script-answers[01;32mnoorsu@SWIFTX14-7-22[00m:[01;34m~/osa12-kontit/script-answers[00m$ ssccrriipptt  ----hheellpp
-[?2004l
-Usage:
- script [options] [file]
-
-Make a typescript of a terminal session.
-
-Options:
- -I, --log-in <file>           log stdin to file
- -O, --log-out <file>          log stdout to file (default)
- -B, --log-io <file>           log stdin and stdout to file
-
- -T, --log-timing <file>       log timing information to file
- -t[<file>], --timing[=<file>] deprecated alias to -T (default file is stderr)
- -m, --logging-format <name>   force to 'classic' or 'advanced' format
-
- -a, --append                  append to the log file
- -c, --command <command>       run command rather than interactive shell
- -e, --return                  return exit code of the child process
- -f, --flush                   run flush after each write
-     --force                   use output file even when it is a link
- -E, --echo <when>             echo input in session (auto, always or never)
- -o, --output-limit <size>     terminate if output files exceed size
- -q, --quiet                   be quiet
-
- -h, --help                    display this help
- -V, --version                 display version
-
-For more details see script(1).
-[?2004h]0;noorsu@SWIFTX14-7-22: ~/osa12-kontit/script-answers[01;32mnoorsu@SWIFTX14-7-22[00m:[01;34m~/osa12-kontit/script-answers[00m$ eecchhoo  --qq
-[?2004l-q
-[?2004h]0;noorsu@SWIFTX14-7-22: ~/osa12-kontit/script-answers[01;32mnoorsu@SWIFTX14-7-22[00m:[01;34m~/osa12-kontit/script-answers[00m$ ssccrriipptt  --qq
-[?2004l[?2004h]0;noorsu@SWIFTX14-7-22: ~/osa12-kontit/script-answers[01;32mnoorsu@SWIFTX14-7-22[00m:[01;34m~/osa12-kontit/script-answers[00m$ ggiitt  ssttaattuuss
-[?2004lOn branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	[31mexercise12_1.txt[m
-	[31mexercise12_2.txt[m
-	[31mtypescript[m
-
-nothing added to commit but untracked files present (use "git add" to track)
-[?2004h]0;noorsu@SWIFTX14-7-22: ~/osa12-kontit/script-answers[01;32mnoorsu@SWIFTX14-7-22[00m:[01;34m~/osa12-kontit/script-answers[00m$ ggiitt  ccoommmmiitt  --mm  ""ssccrriipptt""
-[?2004lOn branch main
-Your branch is up to date with 'origin/main'.
-
-Untracked files:
-  (use "git add <file>..." to include in what will be committed)
-	[31mexercise12_1.txt[m
-	[31mexercise12_2.txt[m
-	[31mtypescript[m
-
-nothing added to commit but untracked files present (use "git add" to track)
-[?2004h]0;noorsu@SWIFTX14-7-22: ~/osa12-kontit/script-answers[01;32mnoorsu@SWIFTX14-7-22[00m:[01;34m~/osa12-kontit/script-answers[00m$ ggiitt  aadddd  ..
-[?2004l[?2004h]0;noorsu@SWIFTX14-7-22: ~/osa12-kontit/script-answers[01;32mnoorsu@SWIFTX14-7-22[00m:[01;34m~/osa12-kontit/script-answers[00m$ [K]0;noorsu@SWIFTX14-7-22: ~/osa12-kontit/script-answers[01;32mnoorsu@SWIFTX14-7-22[00m:[01;34m~/osa12-kontit/script-answers[00m$ [K]0;noorsu@SWIFTX14-7-22: ~/osa12-kontit/script-answers[01;32mnoorsu@SWIFTX14-7-22[00m:[01;34m~/osa12-kontit/script-answers[00m$ ggiitt  ccoommmmiitt  --mm  ""ssccrriipptt""
-[?2004l[main 79c4cb1] script
- 3 files changed, 7 insertions(+)
- creat
