@@ -1,0 +1,17 @@
+Script started on 2024-08-05 11:33:18+03:00 [TERM="xterm-256color" TTY="/dev/pts/17" COLUMNS="238" LINES="17"]
+[?2004h]0;noorsu@SWIFTX14-7-22: ~/osa12-kontit/script-answers[01;32mnoorsu@SWIFTX14-7-22[00m:[01;34m~/osa12-kontit/script-answers[00m$ [7mdocker container run -it ubuntu bash[27mdocker container run -it ubuntu bash
+[?2004l[?2004h]0;root@83cb0020583e: /root@83cb0020583e:/# mkdir -p srv/us      usr/src/app
+[?2004l[?2004h]0;root@83cb0020583e: /root@83cb0020583e:/# ls usr/src/
+[?2004l[0m[01;34mapp[0m
+[?2004h]0;root@83cb0020583e: /root@83cb0020583e:/# touch -p usr/se rc/app/index.js
+[?2004ltouch: invalid option -- 'p'
+Try 'touch --help' for more information.
+[?2004h]0;root@83cb0020583e: /root@83cb0020583e:/# [Ktouch -p usr/src/app/index.js[1P[1P[1P
+[?2004l[?2004h]0;root@83cb0020583e: /root@83cb0020583e:/# [Kls t usr/src/app/
+[?2004lindex.js
+[?2004h]0;root@83cb0020583e: /root@83cb0020583e:/# exit
+[?2004lexit
+[?2004h]0;noorsu@SWIFTX14-7-22: ~/osa12-kontit/script-answers[01;32mnoorsu@SWIFTX14-7-22[00m:[01;34m~/osa12-kontit/script-answers[00m$ exit
+[?2004lexit
+
+Script done on 2024-08-05 11:36:03+03:00 [COMMAND_EXIT_CODE="0"]
