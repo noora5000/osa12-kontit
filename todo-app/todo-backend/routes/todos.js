@@ -29,11 +29,11 @@ const findByIdMiddleware = async (req, res, next) => {
 /* DELETE todo. */
 singleRouter.delete('/', async (req, res) => {
   try {
-    // req.todo määritelty findByIdMiddleware:ssa
-    if(!req.todo){
-      return res.sendStatus(404);
+    const id = req.todo._id;
+    const delAct = await Todo.findByIdAndDelete(id)
+    if(!delAct){
+      res.sendStatus(404);
     }
-    await req.todo.delete();
     res.sendStatus(204).end(); 
   } catch (error) {
     console.error(error); 

@@ -1,6 +1,6 @@
 GET http://localhost:3001/todos HTTP/1.1
 ###
-POST http://localhost:3001/todos HTTP/1.1
+POST http://localhost:3000/todos HTTP/1.1
 Content-Type: application/json
 
 {
@@ -13,7 +13,7 @@ GET http://localhost:3001/todos/66b1c06f787d5f00fbf2c970 HTTP/1.1
 DELETE http://localhost:3001/todos/66b1c969c1c92033cb0fe44a HTTP/1.1
 
 ###
-PUT http://localhost:3001/todos/66b1ca712176fa39d5b6b15a HTTP/1.1
+PUT http://localhost:3000/todos/66b26bb7cc2f8c8073e5e671 HTTP/1.1
 Content-Type: application/json
 
 {
