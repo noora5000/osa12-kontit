@@ -5,7 +5,7 @@ const router = express.Router();
 /* GET todos listing. */
 router.get('/', async (_, res) => {
   const todos = await Todo.find({})
-  res.send(todos);
+  res.json(todos);
 });
 
 /* POST todo to listing. */
@@ -23,24 +23,53 @@ const findByIdMiddleware = async (req, res, next) => {
   const { id } = req.params
   req.todo = await Todo.findById(id)
   if (!req.todo) return res.sendStatus(404)
-
   next()
 }
 
 /* DELETE todo. */
 singleRouter.delete('/', async (req, res) => {
-  await req.todo.delete()  
-  res.sendStatus(200);
+  try {
+    // req.todo määritelty findByIdMiddleware:ssa
+    if(!req.todo){
+      return res.sendStatus(404);
+    }
+    await req.todo.delete();
+    res.sendStatus(204).end(); 
+  } catch (error) {
+    console.error(error); 
+    res.sendStatus(500); 
+  }
 });
 
 /* GET todo. */
 singleRouter.get('/', async (req, res) => {
-  res.sendStatus(405); // Implement this
+  try {
+    // req.todo määritelty findByIdMiddleware:ssa
+    if (!req.todo) {
+      return res.sendStatus(404); 
+    }
+    res.json(req.todo).end();
+
+  } catch (error) {
+    console.error(error); 
+    res.sendStatus(500);
+  }
 });
 
 /* PUT todo. */
 singleRouter.put('/', async (req, res) => {
-  res.sendStatus(405); // Implement this
+  try{
+    const id = req.todo._id;
+    const updateTodo = {
+      text: req.body.text,
+      done: req.body.done,
+    }
+    const update = await Todo.findByIdAndUpdate(id, updateTodo, { new: true })
+    res.json(update);
+  } catch(error){
+    console.error(error)
+    res.sendStatus(500);
+  }
 });
 
 router.use('/:id', findByIdMiddleware, singleRouter)
