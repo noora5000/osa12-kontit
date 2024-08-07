@@ -16,6 +16,10 @@ if (!REDIS_URL) {
   const client = redis.createClient({
     url: REDIS_URL
   })
+
+  client.on('error', (err) => {
+    console.error('Redis error:', err);
+  });
     
   getAsync = promisify(client.get).bind(client)
   setAsync = promisify(client.set).bind(client)    
