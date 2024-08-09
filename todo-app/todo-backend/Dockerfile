@@ -2,10 +2,19 @@ FROM node:20
 
 WORKDIR /usr/src/app
 
-COPY --chown=node:node . .
+#COPY --chown=node:node . .
 
-RUN npm ci
+# Kopioi package.json ja package-lock.json, jotta välimuisti käytetään
+COPY package*.json ./
 
-ENV DEBUG=playground:*
+RUN npm ci --only=production
 
-CMD npm start
+#ENV DEBUG=playground:*
+
+COPY . .
+
+ENV NODE_ENV=production
+
+# npm run dev is the command to start the application in development mode
+CMD ["npm", "start"]
+#CMD ["npm", "run", "dev", "--", "--host"]
