@@ -1,0 +1,33 @@
+services:
+  app:
+    image: dev-frontend
+    build:
+      context: ./uusi-front/patientor
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./uusi-front/patientor/:/usr/src/app
+    ports:
+      - 5173:5173
+    container_name: dev-frontend
+
+  server:
+    image: dev-backend
+    build:
+      context: ./backend
+      dockerfile: dev.Dockerfile
+    volumes:
+      - ./backend/:/usr/src/app
+    ports:
+      - 3001:3001
+    container_name: dev-backend
+  
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.dev.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+    depends_on:
+      - app
+      - server

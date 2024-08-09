@@ -2,7 +2,6 @@
 
 Install dependencies with `npm install`
 
-Start redis server `sudo systemctl start redis-server`
 
 Run with `npm start`
 
